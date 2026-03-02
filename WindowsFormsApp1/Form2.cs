@@ -26,10 +26,25 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
             string slika = openFileDialog1.FileName;
             string zapis=txtIme.Text + "|" + txtVrsta.Text + "|" + txtPasmina.Text + "|" + rbM.Checked + "|" + rbZ.Checked + "|" + nudDob.Text + "|" + dtpDolazak.Text + "|" + cbCijep.Checked + "|" + cbKast.Checked + "|" + txtNapomena.Text + "|" + slika;
             Admin.Unos(zapis);
+            txtIme.Clear();
+            txtVrsta.Clear();
+            txtPasmina.Clear();
+            rbM.Checked = false;
+            rbZ.Checked = false;
+            nudDob.Value = 0;
+            dtpDolazak.Value = DateTime.Now;
+            cbCijep.Checked = false;
+            cbKast.Checked = false;
+            txtNapomena.Clear();
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

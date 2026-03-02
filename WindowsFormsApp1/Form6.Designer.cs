@@ -28,12 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.statistika = new System.Windows.Forms.ListBox();
+            this.SuspendLayout();
+            // 
+            // statistika
+            // 
+            this.statistika.FormattingEnabled = true;
+            this.statistika.Location = new System.Drawing.Point(74, 36);
+            this.statistika.Name = "statistika";
+            this.statistika.Size = new System.Drawing.Size(334, 329);
+            this.statistika.TabIndex = 0;
+            // 
+            // Form6
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.statistika);
+            this.Name = "Form6";
             this.Text = "Form6";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox statistika;
     }
 }
