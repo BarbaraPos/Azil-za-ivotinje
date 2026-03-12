@@ -27,7 +27,34 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             string slika = openFileDialog1.FileName;
-            string zapis=txtIme.Text + "|" + txtVrsta.Text + "|" + txtPasmina.Text + "|" + rbM.Checked + "|" + rbZ.Checked + "|" + nudDob.Text + "|" + dtpDolazak.Text + "|" + cbCijep.Checked + "|" + cbKast.Checked + "|" + txtNapomena.Text + "|" + slika;
+            string spol = "";
+            string kast = "";
+            if (cbKast.Checked == true)
+            {
+                kast = "Da";
+            }
+            else
+            {
+                kast = "Ne";
+            }
+            string cijep = "";
+            if (cbCijep.Checked == true)
+            {
+                cijep = "Da";
+            }
+            else
+            {
+                cijep = "Ne";
+            }
+            if (rbM.Checked == true)
+            {
+                spol = "Muško";
+            }
+            else if (rbZ.Checked == true)
+            {
+                spol = "Žensko";
+            }
+            string zapis=txtIme.Text + "|" + txtVrsta.Text + "|" + txtPasmina.Text + "|" + spol + "|" + nudDob.Text + "|" + dtpDolazak.Text + "|" + cijep + "|" + kast + "|" + txtNapomena.Text + "|" + slika;
             Admin.Unos(zapis);
             txtIme.Clear();
             txtVrsta.Clear();
