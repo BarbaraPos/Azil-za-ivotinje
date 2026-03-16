@@ -31,20 +31,20 @@ namespace WindowsFormsApp1
             string kast = "";
             if (cbKast.Checked == true)
             {
-                kast = "Da";
+                kast = "kastriran";
             }
             else
             {
-                kast = "Ne";
+                kast = "Nije kastriran";
             }
             string cijep = "";
             if (cbCijep.Checked == true)
             {
-                cijep = "Da";
+                cijep = "cijepljen";
             }
             else
             {
-                cijep = "Ne";
+                cijep = "Nije cijepljen";
             }
             if (rbM.Checked == true)
             {
