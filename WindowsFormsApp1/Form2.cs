@@ -66,6 +66,7 @@ namespace WindowsFormsApp1
             cbCijep.Checked = false;
             cbKast.Checked = false;
             txtNapomena.Clear();
+            
 
         }
 

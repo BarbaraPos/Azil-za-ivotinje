@@ -15,11 +15,31 @@ namespace WindowsFormsApp1
             sw.WriteLine(zapis);
             sw.Close();
         }
-
+        public static void UnosUdomitelja(string zapis)
+        {
+            StreamWriter sw = new StreamWriter("udomitelji.txt", true);
+            sw.WriteLine(zapis);
+            sw.Close();
+        }
         public static List<string> Ucitaj()
         {
             List<string> lista = new List<string>();
             StreamReader sr = new StreamReader("azil.txt");
+            string linija = sr.ReadLine();
+
+            while (linija != null)
+            {
+                lista.Add(linija);
+                linija = sr.ReadLine();
+            }
+            sr.Close();
+            return lista;
+        }
+
+        public static List<string> UcitajUdomitelje()
+        {
+            List<string> lista = new List<string>();
+            StreamReader sr = new StreamReader("udomitelji.txt");
             string linija = sr.ReadLine();
 
             while (linija != null)
@@ -64,5 +84,26 @@ namespace WindowsFormsApp1
             sr.Close();
             return lista;
         }
+        public static double ProsjecnaDob()
+        {
+            List<string> lista = new List<string>();
+            StreamReader sr = new StreamReader("azil.txt");
+            string linija = sr.ReadLine();
+            int brojac = 0;
+            int suma = 0;
+            while (linija != null)
+            {
+                string[] dijelovi = linija.Split('|');
+                int dob = int.Parse(dijelovi[4]);
+                suma += dob;
+                brojac++;
+                linija = sr.ReadLine();
+            }
+            sr.Close();
+            double prosjek = (double)suma / brojac;
+            return prosjek;
+        }
+
+        
     }
     } 

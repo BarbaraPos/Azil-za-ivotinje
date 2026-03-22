@@ -32,22 +32,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(137, 45);
+            this.comboBox1.Location = new System.Drawing.Point(206, 69);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(180, 28);
             this.comboBox1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 48);
+            this.label1.Location = new System.Drawing.Point(74, 74);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.Size = new System.Drawing.Size(121, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Odaberite vrstu:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -55,29 +58,45 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(52, 97);
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(78, 149);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(365, 251);
+            this.listBox1.Size = new System.Drawing.Size(546, 384);
             this.listBox1.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(300, 39);
+            this.button1.Location = new System.Drawing.Point(450, 60);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 31);
+            this.button1.Size = new System.Drawing.Size(176, 48);
             this.button1.TabIndex = 3;
             this.button1.Text = "Pretraži";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(206, 567);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(271, 55);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Osvjezi";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form4";
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.Form4_Load);
@@ -92,5 +111,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
