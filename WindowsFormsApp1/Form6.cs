@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
             {
                 brojac++;
             }
-            statistika.Items.Add("Ukupan broj zivotinja u azilu je "+ brojac);
+            statistika.Items.Add("Ukupan broj zivotinja u azilu je " + brojac);
             List<string> Udomitelj = Admin.UcitajUdomitelje();
             int brojac2 = 0;
             foreach (string linija in Udomitelj)
@@ -34,9 +34,14 @@ namespace WindowsFormsApp1
             }
             statistika.Items.Add("Ukupan broj udomljenih je " + brojac2);
             statistika.Items.Add("Broj trenutno prisutnih zivotinja je " + (brojac - brojac2));
-            statistika.Items.Add( "Prosjecna dob zivotinja u azilu je " + Admin.ProsjecnaDob());
+            statistika.Items.Add("Prosjecna dob zivotinja u azilu je " + Admin.ProsjecnaDob());
+            statistika.Items.Add("Broj zivotinja po vrstama: ");
+            foreach (string linija in Admin.VrsteBroj())
+            {
+                statistika.Items.Add(linija);
 
 
+            }
         }
     }
 }
